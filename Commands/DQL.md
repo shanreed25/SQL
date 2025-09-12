@@ -1,0 +1,2 @@
+- **[Data Query Language(DQL)]():** for retrieving data from the database
+    - **SELECT:** To retrieve data from one or more tables
