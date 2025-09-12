@@ -4,7 +4,10 @@
     - **DELETE:** To remove rows of data from a table.
     - **MERGE:** To combine
 
-# INSERT(DML)
+
+_______________________________________________________
+
+# INSERT
 1. Inserting values into specified columns
     - allows you to insert data into specific columns of a table, leaving other columns to their default values or NULL if permitted
     - order of values must match the order of columns. String values should be enclosed in single quotes
@@ -39,3 +42,45 @@
     FROM source_table
     WHERE condition;
     ```
+
+# UPDATE
+- used to modify existing records in a database table
+- **SET:** defines which columns to update and their new values
+    - can update multiple columns by separating the **column = value** pairs with commas
+- **WHERE:** filters the rows that will be affected by the UPDATE statement
+    - only rows that satisfy the specified condition will be updated
+    - if omitted, all rows in the table will be updated with the new values
+
+
+1. Updating a single column in a specific row
+    ```
+    UPDATE tablename
+    SET column1 = newValue
+    WHERE column2 = uniqueCurrentValue;
+    ```
+2. Updating multiple columns in a specific row
+    ```
+    UPDATE tablename
+    SET column1 = newValue1, column2 = newValue2
+    WHERE column3 = currentValue;
+    ```
+
+3. Updating a column for all rows based on a condition
+    ```
+    UPDATE tablename
+    SET column1 = newValue
+    WHERE column3 = currentValue;
+    ```
+
+4. Updating a column for all rows in a table (without a WHERE clause)
+    ```
+    UPDATE tablename
+    SET column1 = newValue
+    ```
+
+# DELETE
+-  used to remove rows from a table in a database
+- `DELETE tablename;`
+    - deletes all rows in the table
+- `DELETE FROM table_name WHERE condition;`
+    - initiate the delete operation and specify the table from which rows will be removed

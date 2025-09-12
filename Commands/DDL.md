@@ -6,8 +6,9 @@
     - **RENAME:** To rename a database object.
 
 
+_______________________________________________________
 
-# CREATE(DDL)
+# CREATE
 - define and create new database objects
 1. Creating a Database
     - `CREATE DATABASE db_name;`
