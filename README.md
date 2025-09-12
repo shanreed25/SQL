@@ -59,6 +59,8 @@
 - commands are instructions used to interact with a relational database management system (RDBMS) to perform various operations
 - commands are fundamental for managing, retrieving, and manipulating data stored in structured formats
 - categorized into several types based on their function
+
+#### Categories
 - **[Data Definition Language(DDL)](./Commands/DDL.md):** for defining and modifying the database structure
     - CREATE 
     - ALTER 

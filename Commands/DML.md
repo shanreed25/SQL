@@ -80,7 +80,10 @@ _______________________________________________________
 
 # DELETE
 -  used to remove rows from a table in a database
-- `DELETE tablename;`
-    - deletes all rows in the table
-- `DELETE FROM table_name WHERE condition;`
-    - initiate the delete operation and specify the table from which rows will be removed
+
+1. Delete all rows in table
+    - `DELETE tablename;`
+2. Delete rows based on a condition
+    ```
+    DELETE FROM table_name WHERE condition;
+    ```
