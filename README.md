@@ -7,8 +7,6 @@
 - allows users to perform a wide range of operations on data, including creating databases and tables, retrieving data using queries, and modifying existing data by adding, updating, or deleting it
 - once you learn SQL, you can use it with many different database systems like MySQL, PostgreSQL, and Microsoft SQL Server
 
-
-
 ## Relational Databases
 - store and organize data in structured tables with pre-defined relationships, using a tabular format of rows and columns to represent records and attributes
 - managed by a Relational Database Management System (RDBMS), which allows users to define, query, and manipulate data using structured query language (SQL)
@@ -60,35 +58,18 @@
 - commands are fundamental for managing, retrieving, and manipulating data stored in structured formats
 - categorized into several types based on their function
 
-#### Categories
+#### Command Categories
 - **[Data Definition Language(DDL)](./Commands/DDL.md):** for defining and modifying the database structure
-    - CREATE 
-    - ALTER 
-    - DROP 
-    - TRUNCATE
-    - RENAME
 - **[Data Manipulation Language(DML)](./Commands/DML.md):** for manipulating data within database tables
-    - INSERT
-    - UPDATE
-    - DELETE
-    - MERGE
 - **[Data Control Language(DCL)](./Commands/DCL.md):**  for managing access rights and permissions within the database
-    - GRANT
-    - REVOKE
 - **[Transaction Control(TCL)](./Commands/TCL.md):** for managing transactions within the database to ensure data integrity
-    - COMMIT
-    - ROLLBACK
-    - SAVEPOINT
 - **[Data Query Language(DQL)](./Commands/DQL.md):** for retrieving data from the database
-    - SELECT
 
 
-### GET Started
-- **SQL SERVER:** Database: https://www.microsoft.com/en-us/sql-server/sql-server-downloads#Get-started
-- **SSMS:** SQL Server Management Studio, editor that will allow you to write queries: https://learn.microsoft.com/en-us/ssms/install/install
-- **Azure Data Studio:** editor to write queries: https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio?tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall
+- [SQL Components](./Components/)
+- [SQL Tools](./Tools/README.md)
+- [SQL Operations and Functions](./Operations-Functions/README.md)
 
 _____________________________________________________
 
-# Query
-- `USE db_name;`
+

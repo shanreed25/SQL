@@ -1,0 +1,20 @@
+CREATE TABLE clean_recipes (
+   id NUMERIC(20, 0),
+    recipe_name VARCHAR(255),
+    review_count INT,
+    recipe_photo VARCHAR(255),
+    author VARCHAR(255),
+    neighbourhood VARCHAR(255),
+    latitude DECIMAL(12, 8),
+    longitude DECIMAL(12, 8),
+    room_type VARCHAR(255),
+    price INT,
+    minimum_nights INT,
+    number_of_reviews INT,
+    last_review DATE,
+    reviews_per_month DECIMAL(10, 2),
+    calculated_host_listings_count INT,
+    availability_365 INT,
+    number_of_reviews_ltm INT,
+    license VARCHAR(255)
+);
