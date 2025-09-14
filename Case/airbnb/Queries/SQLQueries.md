@@ -252,6 +252,37 @@ SELECT *
 FROM airbnb_reviews
 WHERE date LIKE '____-11-__'
 
+-----------------------------------------------------------------------------
+## NULL
+--Find listings that do not have a neighbourhood
+SELECT name, neighbourhood
+FROM airbnb_listings
+WHERE neighbourhood IS NULL
+
+--Find reviewers who did not leave any comments
+SELECT reviewer_name, comments 
+FROM airbnb_reviews
+WHERE comments IS NOT NULL
+
+## CASE Statements
+
+--Categorize Listings as 'High-Priced' or 'Low-Priced based on their price
+SELECT id, name, price,
+CASE WHEN price > 400 
+THEN 'High-Priced'
+ELSE 'Low-Priced'
+END AS price_category
+FROM airbnb_listings
+ORDER BY price_category
+
+--Categorize comments as 'positive', 'negative' or 'neutral' based on keywords
+SELECT listing_id, comments,
+CASE WHEN comments LIKE '%great%' OR comments LIKE '%excellent%' OR comments LIKE '%amazing%' THEN 'Positive'
+WHEN comments LIKE '%good%' OR comments LIKE '%nice%' THEN 'Neutral'
+ELSE 'Negative'
+END AS sentiment
+FROM airbnb_reviews
+
 --Select All
 
 SELECT *  FROM airbnb_listings

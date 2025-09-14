@@ -88,3 +88,46 @@ _____________________________________________________
 ## Functions:
 - SQL provides functions like COALESCE (returns the first non-NULL expression in a list) and NULLIF (returns NULL if two expressions are equal, otherwise returns the first expression) to handle NULL values in various scenarios
 
+# Case Statement/Expression
+- allows for conditional logic within SQL queries
+- similar to an "if-then-else" structure in other programming languages
+- evaluates conditions and returns a value based on the first condition that evaluates to true
+
+## Main types of CASE statements
+- Simple CASE statement: This type compares a single expression to several possible values
+    ```
+    SELECT
+        column1,
+        CASE expression
+            WHEN condition1 THEN result1
+            WHEN condition2 THEN result2
+            ELSE default_result if false
+        END AS new_column_name
+    FROM
+        table_name;
+    ```
+- Searched CASE statement: This type evaluates multiple Boolean conditions
+    ```
+    SELECT
+        column1,
+        CASE
+            WHEN condition1 THEN result1
+            WHEN condition2 THEN result2
+            ELSE default_result if fasle
+        END AS new_column_name
+    FROM
+        table_name;
+    ```
+
+## Key components of a CASE statement
+- CASE: Initiates the conditional expression.
+- WHEN condition THEN result: Specifies a condition and the result to be returned if that condition is met. Multiple WHEN clauses can be used.
+- ELSE default_result: (Optional) Specifies a default result to be returned if none of the WHEN conditions are met. If ELSE is omitted and no WHEN condition is true, NULL is returned.
+- END: Terminates the CASE expression.
+- AS new_column_name: (Optional) Assigns an alias to the new column created by the CASE statement.
+## Common use cases for CASE statements
+- Categorizing data: Grouping data into different categories based on specific criteria (e.g., categorizing sales as "High," "Medium," or "Low").
+- Conditional updates or insertions: Modifying data based on certain conditions.
+- Conditional ordering: Sorting results based on different criteria.
+- Handling NULL values: Providing alternative values when a column contains NULL.
+- Creating pivot tables: Aggregating data conditionally across columns.
