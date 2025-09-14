@@ -13,6 +13,7 @@ TotalViews decimal Not Null,
 
 SELECT * FROM Viewers
 
+# INSERT
 --Inserting values into all columns
 INSERT INTO Viewers
 VALUES('Shakeya', 'keya@gmail.com', 34, 114)
@@ -25,7 +26,7 @@ VALUES('Tai', 'tia@gmail.com', 21, 14),
 	  ('James', 'james@gmail.com', 37, 51),
 	  ('Will', 'will@gmail.com', 22, 216)
 
-
+# SELECT
 --Selecting specific columns from a table
 SELECT Fullname, Age
 FROM Viewers
@@ -42,7 +43,7 @@ FROM Viewers
 WHERE Age > 30
 and Email = 'keya@gmail.com'
 
-
+# UPDATE
 -- Updating a single column in a specific row
 UPDATE Viewers
 SET Age = 33
@@ -62,6 +63,7 @@ WHERE Age < 30;
 UPDATE Viewers
 SET TotalViews = 24
 
+# DELETE
 --Delete all rows in the table
 DELETE Viewers
 

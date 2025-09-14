@@ -24,8 +24,19 @@
 #### Wildcards
 - special characters to represent multiple characters at once
 - allow for flexible and powerful pattern matching beyond exact value comparisons
-- often used with the LIKE operator when searching for data
+- used with the LIKE operator when searching for data
 - often used with the LIKE operator in a WHERE clause to search for patterns in string data
+
 ###### Common Wildcards
-- `%` represents zero or more characters
-- `_` represents a single character
+- `%` (Percent Sign) represents zero or more characters
+- `_` (Underscore) represents a single character
+- `[]` (Brackets) represents any single character within the specified set
+    - `WHERE FirstName LIKE '[ABC]%'` will find names starting with 'A', 'B', or 'C'
+- `^` (Caret) used within brackets to represent any single character not within the specified set
+    - `WHERE City LIKE '[^A-C]%'` will find cities that do not start with 'A', 'B', or 'C'
+- `-` (Hyphen) used within brackets to define a range of characters
+    - `WHERE LastName LIKE '[M-P]%'` will find last names starting with any letter from 'M' to 'P'
+
+###### Escaping Wildcards
+- if you need to search for the literal `%` or `_` characters within your data, you need to use an `ESCAPE `clause to define an escape character
+    - `!%` is interpreted as the literal characters `!%` rather than the wildcard and the escape character

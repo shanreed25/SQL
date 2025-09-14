@@ -73,3 +73,18 @@
 _____________________________________________________
 
 
+# NULL
+- a special marker that signifies that the value is either unknown, not applicable, or will be added later
+- is distinct from zero, an empty string, or a blank space, as it represents the absence of any value
+- comparisons involving NULL (e.g., NULL = NULL, NULL > 5) do not evaluate to TRUE or FALSE but rather to UNKNOWN due to the indeterminate nature of NULL
+- to check for NULL values in a WHERE clause, the IS NULL or IS NOT NULL operators must be used instead of standard comparison operators
+
+## Impact on Aggregate Functions:
+- Aggregate functions like AVG(), SUM(), and COUNT() typically ignore NULL values in their calculations unless explicitly handled (e.g., using COALESCE to replace NULL with a default value).
+## Sorting:
+- when sorting in ascending order, NULL values usually appear first, while in descending order, they typically appear last.
+## Constraints:
+- columns can be defined as NOT NULL to prevent NULL values from being inserted, ensuring data integrity for mandatory fields like primary keys.
+## Functions:
+- SQL provides functions like COALESCE (returns the first non-NULL expression in a list) and NULLIF (returns NULL if two expressions are equal, otherwise returns the first expression) to handle NULL values in various scenarios
+
